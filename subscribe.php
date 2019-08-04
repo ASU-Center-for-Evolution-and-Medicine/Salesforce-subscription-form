@@ -6,7 +6,7 @@ $form = json_decode( $postdata);
 
 
 //make submissions
-submitToAirtable($form);
+submitToAirtable($form); 
 subscribeToSales($form);
 
 //this function submits to all of the lists the person wants to subscribe to
@@ -77,9 +77,10 @@ function submitToSalesforce( $data, $list ){
     return $response;
 }
 
-//this part submits to airtable because we like to keep track of our subscribes there as well
+// this is an optional part that submits the data to airtable as well
+// useful if you want to keep data in multiple places.
 function submitToAirtable( $data ){
-    $url = "https://api.airtable.com/v0/appZqAsYXK84XUxUr/NewRecord?maxRecords=3&view=Main%20View";
+    $url = "#"; 
 
 		$newsletter = [];
 
